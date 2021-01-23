@@ -6,7 +6,7 @@ public class Card {
 	private String name;
 	private int value;
 	// creating a card and adding inputs to value
-	//  and adding suit to name via string concatenation
+	//  and adding suit to name
 	public Card( int values, String suit ) {
 		value = values;
 		switch ( values ) {
@@ -37,14 +37,14 @@ public class Card {
 		case 14: name = "Ace";
 			break;
 		}
-		name.concat( " of " ).concat( suit );
+		name += " of " + suit;
 	}
 	//1 a. ii. 2. Make a describe method that prints out information about a card.
 	public void describeCard() {
 		System.out.println( name + " " + value );
 	}
 
-	//1 a. ii. 1. Make getters and setter for you value and name.
+	//1 a. ii. 1. Make getters and setter for  value and name.
 	public String getName() {
 		return name;
 	}
